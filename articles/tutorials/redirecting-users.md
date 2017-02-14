@@ -6,9 +6,9 @@ description: How to handle returning users after authentication.
 
 In order to give your application's users a good experience, it is necessary to handle how users are redirected back to your application after authentication.
 
-The `redirect_uri` field is meant to be used for a callback url, which is not necesarily they URL you want to bring users to after authentication. Callback URLs are the URLs that Auth0 invokes after the authentication process where your application is then routed. Since callback URLs can be manipulated for security only whitelisted URLs set in `Allowed Callback URLs` will be recognized as valid. 
+The `redirect_uri` field is meant to be used for a callback URL, which is not necesarily the URL you want to bring users to after authentication. Callback URLs are the URLs that Auth0 invokes after the authentication process where your application is then routed. Since callback URLs can be manipulated for security, only whitelisted URLs set in `Allowed Callback URLs` will be recognized as valid. 
 
-If you want to redirect your users to another page on your site that is not the callback url, there are a few options on how to do so:
+If you want to redirect your users to another page on your site that is not the callback URL, there are a few options on how to do so:
 
 ## Using the `state` parameter
 The `state` parameter is one of the supported Auth0 [Authentication Parameters](/libraries/lock/v10/sending-authentication-parameters). You can use this field to hold multiple values such as a JSON object that holds the URL you want to bring the user to. 
